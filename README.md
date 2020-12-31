@@ -9,7 +9,12 @@ Install via **npm**:
 
 `npm install --save-dev eslint eslint-config-swimlane`
 
-Add `extends: 'swimlane/base'` to your eslint config
+Edit your eslint configuration with:
+
+JavaScript: `extends: 'swimlane/configs/base'`
+esnext: `extends: 'swimlane/configs/esnext'`
+node: `extends: 'swimlane/configs/typescript'`
+TypeScript: `extends: 'swimlane/configs/typescript'`
 
 ## Credits
 `lint-rules` is a [Swimlane](http://swimlane.com) open-source project; we
