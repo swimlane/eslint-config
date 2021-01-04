@@ -3,6 +3,5 @@ export default {
   testEnvironment: 'node',
   testMatch: [
     '**/*.spec.js'
-  ],
-  testIgnore: [ '**/__fixtures/**' ]
+  ]
 };

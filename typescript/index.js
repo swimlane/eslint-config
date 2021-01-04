@@ -1,11 +1,17 @@
+const { rules } = require('../esnext/base');
+
 module.exports = {
-  extends: [ '../esnext/index' ],
-  parser: '@typescript-eslint/parser',
   plugins: [
     '@typescript-eslint',
-    '@typescript-eslint/tslint',
     'security'
   ],
+
+  extends: [ 'esnext', 'esnext/style-guide', 'plugin:@typescript-eslint/recommended', 'plugin:security/recommended' ],
+  parser: '@typescript-eslint/parser',
+
   rules: {
+    ...rules,
+    'no-extra-parens': 'off',
+    '@typescript-eslint/no-extra-parens': [ 'error' ]
   }
 };

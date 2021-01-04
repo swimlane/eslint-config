@@ -24,7 +24,7 @@ extends: @swimlane
 Install:
 
 ```sh
-npm install --save-dev eslint-config-esnext eslint-config-recommended eslint-plugin-security
+npm install --save-dev eslint-config-esnext eslint-plugin-security
 ```
 
 Create an .eslintrc.yml file with the following:
@@ -37,8 +37,8 @@ extends: @swimlane/eslint-config/esnext
 
 Install:
 
-```
-npm install --save-dev eslint-config-esnext eslint-config-recommended eslint-plugin-security
+```sh
+npm install --save-dev eslint-config-esnext eslint-plugin-security
 npm install --save-dev @typescript-eslint/parser @typescript-eslint/eslint-plugin
 ```
 

@@ -1,5 +1,9 @@
 const getErrors = require('../jest.setup')(__dirname);
 
+test('ok', async () => {
+  expect(await getErrors('ok.js')).toMatchInlineSnapshot(`""`);
+});
+
 test('quotes', async () => {
   expect(await getErrors('quotes.js')).toMatchInlineSnapshot(`
     "/Users/jayson.harshbarger/workspace/tools/eslint-config/esnext/__fixtures__/quotes.js: line 5, col 12, Error - Strings must use singlequote. (quotes)

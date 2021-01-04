@@ -1,7 +1,7 @@
 const { join } = require('path');
 const { ESLint } = require('eslint');
 
-module.exports = function (dirname) {
+module.exports = dirname => {
   const overrideConfigFile = join(dirname, 'index.js');
 
   const eslint = new ESLint({
@@ -9,11 +9,11 @@ module.exports = function (dirname) {
     overrideConfigFile
   });
 
-  return async function (fileToTest) {
+  return async fileToTest => {
     const path = join(dirname, '__fixtures__', fileToTest);
     const results = await eslint.lintFiles([ path ]);
     const formatter = await eslint.loadFormatter('compact');
     const resultText = formatter.format(results);
     return resultText;
   };
-}
+};

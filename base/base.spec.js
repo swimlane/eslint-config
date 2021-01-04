@@ -1,5 +1,9 @@
 const getErrors = require('../jest.setup')(__dirname);
 
+test('ok', async () => {
+  expect(await getErrors('ok.js')).toMatchInlineSnapshot(`""`);
+});
+
 test('no-mixed-spaces-and-tabs', async () => {
   expect(await getErrors('no-mixed-spaces-and-tabs.js')).toMatchInlineSnapshot(`
     "/Users/jayson.harshbarger/workspace/tools/eslint-config/base/__fixtures__/no-mixed-spaces-and-tabs.js: line 2, col 1, Error - Expected indentation of 2 spaces but found 1 tab. (indent)

@@ -1,7 +1,17 @@
+const { rules } = require('../esnext/base');
+
 module.exports = {
-  extends: [ '../esnext/index' ],
+  plugins: [
+    'security'
+  ],
+  extends: [ 'esnext', 'esnext/style-guide', 'node', 'node/style-guide', 'plugin:security/recommended' ],
   rules: {
-    'import/no-nodejs-modules': 0
+    ...rules
+  },
+  env: {
+    node: true,
+    es6: true,
+    commonjs: true
   },
   globals: {
     __dirname: 'readonly'

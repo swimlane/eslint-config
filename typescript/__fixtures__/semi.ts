@@ -1,6 +1,4 @@
-/* eslint-disable no-unused-vars */
-
-function goodbye (a: any) {
+export default function goodbye(a: number): string {
   if (a === 1) {
     return 'Earth'
   }
