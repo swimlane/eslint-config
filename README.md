@@ -7,17 +7,49 @@ Rules for [eslint](https://github.com/eslint/eslint) used in Swimlane's Javascri
 ## Usage
 Install via **npm**:
 
-`npm install --save-dev eslint eslint-config-swimlane`
+`npm install --save-dev eslint @swimlane/eslint-config`
 
-Edit your eslint configuration with:
+Depending on your environment:
 
-JavaScript: `extends: 'swimlane/configs/base'`
-esnext: `extends: 'swimlane/configs/esnext'`
-node: `extends: 'swimlane/configs/typescript'`
-TypeScript: `extends: 'swimlane/configs/typescript'`
+### Javascript
+
+Create an .eslintrc.yml file with the following:
+
+```yaml
+extends: @swimlane
+```
+
+### ESnext
+
+Install:
+
+```sh
+npm install --save-dev eslint-config-esnext eslint-config-recommended eslint-plugin-security
+```
+
+Create an .eslintrc.yml file with the following:
+
+```yaml
+extends: @swimlane/eslint-config/esnext
+```
+
+### TypeScript
+
+Install:
+
+```
+npm install --save-dev eslint-config-esnext eslint-config-recommended eslint-plugin-security
+npm install --save-dev @typescript-eslint/parser @typescript-eslint/eslint-plugin
+```
+
+Create an .eslintrc.yml file with the following:
+
+```yaml
+extends: @swimlane/eslint-config/typescript
+```
 
 ## Credits
-`lint-rules` is a [Swimlane](http://swimlane.com) open-source project; we
+`@swimlane/eslint-config` is a [Swimlane](http://swimlane.com) open-source project; we
 believe in giving back to the open-source community by sharing some of the
 projects we build.
 

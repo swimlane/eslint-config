@@ -2,10 +2,12 @@ env:
   browser: true
   commonjs: true
   es2021: true
-extends: [ './configs/node' ]
+extends: [ './node/index' ]
 parserOptions:
   ecmaVersion: 12
-rules: {}
+rules:
+  import/no-commonjs: 0
 globals:
   test: readonly
   expect: readonly
+ignorePatterns: [ "**/__fixtures__/**" ]

@@ -1,8 +1,8 @@
 export default {
   clearMocks: true,
-  // setupFiles: [],
-  testEnvironment: "node",
+  testEnvironment: 'node',
   testMatch: [
-    "**/tests/*.spec.[jt]s?(x)"
-  ]
+    '**/*.spec.js'
+  ],
+  testIgnore: [ '**/__fixtures/**' ]
 };
