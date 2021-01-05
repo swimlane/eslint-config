@@ -65,6 +65,7 @@ extends: @swimlane/eslint-config/typescript
 ```
 
 ## Credits
+
 `@swimlane/eslint-config` is a [Swimlane](http://swimlane.com) open-source project; we
 believe in giving back to the open-source community by sharing some of the
 projects we build.

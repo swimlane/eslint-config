@@ -16,8 +16,16 @@ module.exports = {
     semi: [ 2, 'always' ],
     'comma-dangle': [ 'error', 'never' ],
     'space-before-function-paren': 0,
+
+    'generator-star-spacing': 2,
+
     'babel/generator-star-spacing': 0,
-    'generator-star-spacing': 2
+
+    'sort-imports': [ 'error', { allowSeparatedGroups: true } ],
+
+    'import/prefer-default-export': 'off',
+
+    'security/detect-object-injection': 'off'
   }
 
 };
