@@ -1,12 +1,10 @@
-const { rules } = require('../esnext/base');
+const { rules: baseRules } = require('../esnext/base');
 
 module.exports = {
-  plugins: [
-    'security'
-  ],
-  extends: [ 'esnext', 'esnext/style-guide', 'node', 'node/style-guide', 'plugin:security/recommended' ],
+  plugins: ['security'],
+  extends: ['esnext', 'esnext/style-guide', 'node', 'node/style-guide', 'plugin:security/recommended'],
   rules: {
-    ...rules
+    ...baseRules
   },
   env: {
     node: true,

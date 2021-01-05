@@ -1,11 +1,9 @@
-const { rules } = require('./base');
+const { rules: baseRules } = require('./base');
 
 module.exports = {
-  plugins: [
-    'security'
-  ],
+  plugins: ['security'],
 
-  extends: [ 'esnext', 'esnext/style-guide', 'plugin:security/recommended' ],
+  extends: ['esnext', 'esnext/style-guide', 'plugin:security/recommended'],
 
   parserOptions: {
     ecmaVersion: 2018,
@@ -17,7 +15,6 @@ module.exports = {
   },
 
   rules: {
-    ...rules
+    ...baseRules
   }
-
 };

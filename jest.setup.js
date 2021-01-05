@@ -11,7 +11,7 @@ module.exports = dirname => {
 
   return async fileToTest => {
     const path = join(dirname, '__fixtures__', fileToTest);
-    const results = await eslint.lintFiles([ path ]);
+    const results = await eslint.lintFiles([path]);
     const formatter = await eslint.loadFormatter('compact');
     const resultText = formatter.format(results);
     // eslint-disable-next-line security/detect-non-literal-regexp

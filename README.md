@@ -17,6 +17,7 @@ Create an .eslintrc.yml file with the following:
 ```yaml
 extends: @swimlane
 ```
+
 ## ESnext
 
 Install:

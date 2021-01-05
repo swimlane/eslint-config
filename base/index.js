@@ -1,29 +1,27 @@
 /* eslint-disable import/no-commonjs */
 
 module.exports = {
-
-  extends: [ 'eslint:recommended' ],
+  extends: ['eslint:recommended'],
 
   rules: {
-    'arrow-parens': 0,
-    curly: 0,
-    forin: 0,
-    indent: [ 'error', 2, { SwitchCase: 1 } ],
-    'interface-name': 0,
-    'valid-jsdoc': 2,
-    'member-access': 0,
-    'no-bitwise': 0,
+    'arrow-parens': 'off',
+    curly: 'off',
+    forin: 'off',
+    indent: ['error', 2, { SwitchCase: 1 }],
+    'interface-name': 'off',
+    'valid-jsdoc': 'error',
+    'member-access': 'off',
+    'no-bitwise': 'off',
     'no-console': 1,
-    'no-reference': 0,
-    'no-string-literal': 0,
-    'no-trailing-whitespace': 0,
-    'no-unused-new': 0,
-    'no-var-requires': 0,
-    'object-literal-sort-keys': 0,
-    'only-arrow-functions': 0,
-    'ordered-imports': 0,
-    'prefer-for-of': 0,
-    'trailing-comma': 0
+    'no-reference': 'off',
+    'no-string-literal': 'off',
+    'no-trailing-whitespace': 'off',
+    'no-unused-new': 'off',
+    'no-var-requires': 'off',
+    'object-literal-sort-keys': 'off',
+    'only-arrow-functions': 'off',
+    'ordered-imports': 'off',
+    'prefer-for-of': 'off',
+    'trailing-comma': 'off'
   }
-
 };

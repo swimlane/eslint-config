@@ -1,5 +1,5 @@
 module.exports = {
-  extends: [ ],
+  extends: [],
 
   parserOptions: {
     ecmaVersion: 2018,
@@ -11,21 +11,26 @@ module.exports = {
   },
 
   rules: {
-    indent: [ 'error', 2, { SwitchCase: 1 } ],
-    curly: [ 'off' ],
-    semi: [ 2, 'always' ],
-    'comma-dangle': [ 'error', 'never' ],
-    'space-before-function-paren': 0,
+    indent: ['error', 2, { SwitchCase: 1 }],
+    curly: ['off'],
+    semi: ['error', 'always'],
+    'comma-dangle': ['error', 'never'],
+    'space-before-function-paren': 'off',
 
-    'generator-star-spacing': 2,
+    // deprecated (The babel/generator-star-spacing rule is deprecated. Please use the built in generator-star-spacing rule instead)
+    'babel/generator-star-spacing': 'off',
+    'generator-star-spacing': 'error',
 
-    'babel/generator-star-spacing': 0,
-
-    'sort-imports': [ 'error', { allowSeparatedGroups: true } ],
+    // Allowing groups
+    'sort-imports': ['error', { allowSeparatedGroups: true }],
 
     'import/prefer-default-export': 'off',
 
-    'security/detect-object-injection': 'off'
-  }
+    // false positive prone, https://github.com/nodesecurity/eslint-plugin-security/issues/21
+    'security/detect-object-injection': 'off',
 
+    // conflicts with prettier
+    'array-bracket-spacing': 'off',
+    'max-len': 'off'
+  }
 };
