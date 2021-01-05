@@ -2,28 +2,27 @@
 
 [![npm version](https://badge.fury.io/js/eslint-config-swimlane.svg)](https://badge.fury.io/js/eslint-config-swimlane)
 
-Rules for [eslint](https://github.com/eslint/eslint) used in Swimlane's Javascript development.
+Rules for [eslint](https://github.com/eslint/eslint) used in Swimlane's Javascript (etc) development.
 
-## Usage
-Install via **npm**:
+## Javascript
 
-`npm install --save-dev eslint @swimlane/eslint-config`
+Install:
 
-Depending on your environment:
-
-### Javascript
+```sh
+npm install --save-dev eslint @swimlane/eslint-config
+```
 
 Create an .eslintrc.yml file with the following:
 
 ```yaml
 extends: @swimlane
 ```
-
-### ESnext
+## ESnext
 
 Install:
 
 ```sh
+npm install --save-dev eslint @swimlane/eslint-config
 npm install --save-dev eslint-config-esnext eslint-plugin-security
 ```
 
@@ -33,11 +32,28 @@ Create an .eslintrc.yml file with the following:
 extends: @swimlane/eslint-config/esnext
 ```
 
-### TypeScript
+## Node
 
 Install:
 
 ```sh
+npm install --save-dev eslint @swimlane/eslint-config
+npm install --save-dev eslint-config-esnext eslint-plugin-security
+npm install --save-dev eslint-config-node
+```
+
+Create an .eslintrc.yml file with the following:
+
+```yaml
+extends: @swimlane/eslint-config/node
+```
+
+## TypeScript
+
+Install:
+
+```sh
+npm install --save-dev eslint @swimlane/eslint-config
 npm install --save-dev eslint-config-esnext eslint-plugin-security
 npm install --save-dev @typescript-eslint/parser @typescript-eslint/eslint-plugin
 ```
