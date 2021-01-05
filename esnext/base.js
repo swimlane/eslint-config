@@ -15,7 +15,9 @@ module.exports = {
     curly: [ 'off' ],
     semi: [ 2, 'always' ],
     'comma-dangle': [ 'error', 'never' ],
-    'space-before-function-paren': 0
+    'space-before-function-paren': 0,
+    'babel/generator-star-spacing': 0,
+    'generator-star-spacing': 2
   }
 
 };

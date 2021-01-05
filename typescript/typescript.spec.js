@@ -6,7 +6,7 @@ test('ok', async () => {
 
 test('quotes', async () => {
   expect(await getErrors('quotes.ts')).toMatchInlineSnapshot(`
-    "/Users/jayson.harshbarger/workspace/tools/eslint-config/typescript/__fixtures__/quotes.ts: line 3, col 12, Error - Strings must use singlequote. (quotes)
+    "__fixtures__/quotes.ts: line 3, col 12, Error - Strings must use singlequote. (quotes)
 
     1 problem"
   `);
@@ -14,7 +14,7 @@ test('quotes', async () => {
 
 test('semi', async () => {
   expect(await getErrors('semi.ts')).toMatchInlineSnapshot(`
-    "/Users/jayson.harshbarger/workspace/tools/eslint-config/typescript/__fixtures__/semi.ts: line 3, col 19, Error - Missing semicolon. (semi)
+    "__fixtures__/semi.ts: line 3, col 19, Error - Missing semicolon. (semi)
 
     1 problem"
   `);

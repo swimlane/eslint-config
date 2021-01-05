@@ -14,6 +14,7 @@ module.exports = dirname => {
     const results = await eslint.lintFiles([ path ]);
     const formatter = await eslint.loadFormatter('compact');
     const resultText = formatter.format(results);
-    return resultText;
+    // eslint-disable-next-line security/detect-non-literal-regexp
+    return resultText.replace(new RegExp(dirname + '/', 'g'), '');
   };
 };
