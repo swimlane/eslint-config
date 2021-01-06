@@ -4,49 +4,25 @@
 
 Rules for [eslint](https://github.com/eslint/eslint) used in Swimlane's Javascript (etc) development.
 
-## Javascript
+## Javascript (es6)
 
 Install:
 
 ```sh
-npm install --save-dev eslint @swimlane/eslint-config
+npm install --save-dev eslint @swimlane/eslint-config eslint-plugin-security
 ```
 
 Create an .eslintrc.yml file with the following:
 
 ```yaml
-extends: @swimlane
-```
-
-## ESnext
-
-Install:
-
-```sh
-npm install --save-dev eslint @swimlane/eslint-config
-npm install --save-dev eslint-config-esnext eslint-plugin-security
-```
-
-Create an .eslintrc.yml file with the following:
-
-```yaml
-extends: @swimlane/eslint-config/esnext
-```
-
-## Node
-
-Install:
-
-```sh
-npm install --save-dev eslint @swimlane/eslint-config
-npm install --save-dev eslint-config-esnext eslint-plugin-security
-npm install --save-dev eslint-config-node
-```
-
-Create an .eslintrc.yml file with the following:
-
-```yaml
-extends: @swimlane/eslint-config/node
+env:
+  browser: true
+  commonjs: true
+  es2021: true
+extends:
+  - '@swimlane'
+parserOptions:
+  ecmaVersion: 12
 ```
 
 ## TypeScript
@@ -54,15 +30,39 @@ extends: @swimlane/eslint-config/node
 Install:
 
 ```sh
-npm install --save-dev eslint @swimlane/eslint-config
-npm install --save-dev eslint-config-esnext eslint-plugin-security
+npm install --save-dev eslint @swimlane/eslint-config eslint-plugin-security
 npm install --save-dev @typescript-eslint/parser @typescript-eslint/eslint-plugin
 ```
 
-Create an .eslintrc.yml file with the following:
+Create an `.eslintrc.yml` file with the following:
 
 ```yaml
-extends: @swimlane/eslint-config/typescript
+env:
+  browser: true
+  es2021: true
+  node: true
+extends:
+  - '@swimlane/eslint-config/typescript'
+parserOptions:
+  ecmaVersion: 12
+  sourceType: module
+```
+
+## Prettier
+
+If using prettier (for example [@swimlane/prettier-config-swimlane](https://github.com/swimlane/prettier-config-swimlane)) you should follow instructions in the [eslint-config-prettier readme](https://github.com/prettier/eslint-config-prettier#readme) to install and setup `eslint-config-prettier`. For example for es6 config your
+`.eslintrc.yml` file will be:
+
+```yaml
+env:
+  browser: true
+  commonjs: true
+  es2021: true
+extends:
+  - '@swimlane'
+  - 'prettier'
+parserOptions:
+  ecmaVersion: 12
 ```
 
 ## Credits

@@ -1,7 +1,7 @@
 const getErrors = require('../jest.setup')(__dirname);
 
 test('ok', async () => {
-  expect(await getErrors('ok.ts')).toMatchInlineSnapshot(`""`);
+  expect(await getErrors('ok.ts')).toEqual('');
 });
 
 test('quotes', async () => {

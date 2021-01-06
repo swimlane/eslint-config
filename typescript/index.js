@@ -1,23 +1,25 @@
-const { rules: baseRules } = require('../esnext/base');
-
 module.exports = {
+  env: {
+    browser: true,
+    es2021: true,
+    node: true
+  },
+
   plugins: ['@typescript-eslint', 'security'],
 
-  extends: ['esnext', 'esnext/style-guide', 'plugin:@typescript-eslint/recommended', 'plugin:security/recommended'],
+  extends: [
+    'eslint:recommended',
+    '../legacy/rules',
+    '../es6/rules',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:security/recommended',
+    './rules'
+  ],
   parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaVersion: 12,
+    sourceType: 'module'
+  },
 
-  rules: {
-    ...baseRules,
-
-    // Replace 'no-extra-parens' rule with '@typescript-eslint' version
-    'no-extra-parens': 'off',
-    '@typescript-eslint/no-extra-parens': ['error'],
-
-    // Warning only
-    '@typescript-eslint/no-explicit-any': ['warn', { ignoreRestArgs: true }],
-
-    // Better handeled via TypeScript compiler
-    'import/named': 'off',
-    'import/no-unresolved': 'off'
-  }
+  rules: {}
 };

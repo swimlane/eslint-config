@@ -1,9 +1,8 @@
 /* globals readdirSync:readonly */
 
-/* eslint-disable-next-line import/no-unresolved */
 import test from 'tape';
 
-// eslint-disable-next-line import/no-commonjs, @typescript-eslint/no-var-requires
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const base = require('../base');
 
 const files = { base };
@@ -13,7 +12,7 @@ readdirSync('../rules').forEach((name: string) => {
     return;
   }
 
-  // eslint-disable-next-line import/no-commonjs, security/detect-non-literal-require, security/detect-object-injection, security/detect-object-injection
+  // eslint-disable-next-line security/detect-non-literal-require, security/detect-object-injection, security/detect-object-injection
   files[name] = require(`../rules/${ name }`);
 });
 

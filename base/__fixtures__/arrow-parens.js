@@ -1,5 +1,0 @@
-// Allowed
-a => {}
-
-// Better
-(a) => {}
