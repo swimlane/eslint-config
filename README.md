@@ -1,6 +1,4 @@
-# Swimlane Lint Rules - Javascript
-
-[![npm version](https://badge.fury.io/js/eslint-config-swimlane.svg)](https://badge.fury.io/js/eslint-config-swimlane)
+# Swimlane Eslint Rules
 
 Rules for [eslint](https://github.com/eslint/eslint) used in Swimlane's Javascript (etc) development.
 
