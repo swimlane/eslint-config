@@ -63,6 +63,26 @@ parserOptions:
   ecmaVersion: 12
 ```
 
+## Versioning Policy
+
+* Major
+  - A new rule is added
+  - An existing rule is made more strict (new linting errors)
+  - A new plugin is added to an existing config
+  - A existing plugin is updated to be more strict (new linting errors)
+
+* Minor
+  - A rule is removed
+  - An existing rules is made less strict (fewer linting errors)
+  - Adding a new configuration
+  - A existing plugin is updated to be less strict (fewer linting errors)
+
+* Patch
+  - Changes to documentation
+  - Fixes for build or publication
+  - Modifying tests
+
+
 ## Credits
 
 `@swimlane/eslint-config` is a [Swimlane](http://swimlane.com) open-source project; we
