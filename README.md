@@ -65,23 +65,24 @@ parserOptions:
 
 ## Versioning Policy
 
-* Major
+- Major
+
   - A new rule is added
   - An existing rule is made more strict (new linting errors)
   - A new plugin is added to an existing config
   - A existing plugin is updated to be more strict (new linting errors)
 
-* Minor
+- Minor
+
   - A rule is removed
   - An existing rules is made less strict (fewer linting errors)
   - Adding a new configuration
   - A existing plugin is updated to be less strict (fewer linting errors)
 
-* Patch
+- Patch
   - Changes to documentation
   - Fixes for build or publication
   - Modifying tests
-
 
 ## Credits
 
