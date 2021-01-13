@@ -36,9 +36,12 @@ Object.keys(files).forEach(name => {
   });
 });
 
+// 'no-underscore-dangle': 'off'
+const _underscore = 123;
+
 // @typescript-eslint/no-unused-vars: ['error', { argsIgnorePattern: '^_' }]
 export const x = (_unused: string): number => {
-  return 4;
+  return _underscore;
 };
 
 // '@typescript-eslint/naming-convention': [

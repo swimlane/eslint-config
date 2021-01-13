@@ -34,6 +34,10 @@ Object.keys(files).forEach(name => {
   });
 });
 
+// 'no-underscore-dangle': 'off'
+const _underscore = 123;
+
 export const x = (_unused) => {
-  return 4;
+  return _underscore;
 };
+
