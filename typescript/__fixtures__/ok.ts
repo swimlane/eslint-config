@@ -35,3 +35,22 @@ Object.keys(files).forEach(name => {
     t.deepEquals(reactRuleIds, [], 'there are no react/ rules');
   });
 });
+
+// @typescript-eslint/no-unused-vars: ['error', { argsIgnorePattern: '^_' }]
+export const x = (_unused: string): number => {
+  return 4;
+};
+
+// '@typescript-eslint/naming-convention': [
+//   'error',
+//   { selector: 'enumMember', format: null }
+// ]
+export enum X {
+  camelCase,
+  PascalCase,
+  snake_case,
+  UPPER_CASE
+}
+
+// non-null assertions: false
+export const includesBaz: boolean = foo.bar!.includes('baz');

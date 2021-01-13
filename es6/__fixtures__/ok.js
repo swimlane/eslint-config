@@ -33,3 +33,7 @@ Object.keys(files).forEach(name => {
     t.deepEquals(reactRuleIds, [], 'there are no react/ rules');
   });
 });
+
+export const x = (_unused) => {
+  return 4;
+};
