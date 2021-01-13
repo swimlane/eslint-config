@@ -33,3 +33,11 @@ Object.keys(files).forEach(name => {
     t.deepEquals(reactRuleIds, [], 'there are no react/ rules');
   });
 });
+
+// 'no-underscore-dangle': 'off'
+const _underscore = 123;
+
+export const x = (_unused) => {
+  return _underscore;
+};
+
