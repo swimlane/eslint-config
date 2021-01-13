@@ -85,6 +85,13 @@ parserOptions:
   - Fixes for build or publication
   - Modifying tests
 
+## Publish steps
+
+- Checkout main (`git checkout main`)
+- Pull master (`git pull`)
+- Examine `CHANGELOG.md` to determine next version (X.Y.Z)
+- Run np (`npm run np`)
+
 ## Credits
 
 `@swimlane/eslint-config` is a [Swimlane](http://swimlane.com) open-source project; we
