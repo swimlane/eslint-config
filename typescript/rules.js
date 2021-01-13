@@ -27,6 +27,10 @@ module.exports = {
     '@typescript-eslint/no-non-null-assertion': 'off',
 
     // Allow loose naming convention for enum members
-    '@typescript-eslint/naming-convention': ['error', { selector: 'enumMember', format: null }]
+    '@typescript-eslint/naming-convention': ['error', { selector: 'enumMember', format: null }],
+
+    // overly strict security rules
+    'security/detect-object-injection': 'off', // false positive prone, https://github.com/nodesecurity/eslint-plugin-security/issues/21
+    'security/detect-non-literal-fs-filename': 'off' // many false positives
   }
 };
