@@ -6,6 +6,9 @@ module.exports = {
     // Allow unused args with underscore
     'no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
 
+    // no console
+    'no-console': 'error',
+
     // conflicts with prettier
     'array-bracket-spacing': 'off',
     'max-len': 'off',

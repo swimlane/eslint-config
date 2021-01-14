@@ -43,3 +43,11 @@ test('security/detect-child-process', async () => {
     1 problem"
   `);
 });
+
+test('no console', async () => {
+  expect(await getErrors('no-console.js')).toMatchInlineSnapshot(`
+    "__fixtures__/no-console.js: line 1, col 1, Error - Unexpected console statement. (no-console)
+
+    1 problem"
+  `);
+});
