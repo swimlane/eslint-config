@@ -3,8 +3,10 @@ CHANGELOG
 
 ## HEAD (Unreleased)
 
-* Patch: added tests
 * Major: added `'no-console': 'error'`
+* Major: added `'no-alert': 'error'`
+* Major: added `'no-debugger': 'error'`
+* Patch: added tests
 
 ---
 

@@ -51,3 +51,19 @@ test('no console', async () => {
     1 problem"
   `);
 });
+
+test('no alert', async () => {
+  expect(await getErrors('no-alert.js')).toMatchInlineSnapshot(`
+    "__fixtures__/no-alert.js: line 1, col 1, Error - Unexpected alert. (no-alert)
+
+    1 problem"
+  `);
+});
+
+test('no debugger', async () => {
+  expect(await getErrors('no-debugger.js')).toMatchInlineSnapshot(`
+    "__fixtures__/no-debugger.js: line 1, col 1, Error - Unexpected 'debugger' statement. (no-debugger)
+
+    1 problem"
+  `);
+});

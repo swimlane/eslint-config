@@ -8,6 +8,8 @@ module.exports = {
 
     // no console
     'no-console': 'error',
+    'no-alert': 'error',
+    'no-debugger': 'error',
 
     // conflicts with prettier
     'array-bracket-spacing': 'off',
