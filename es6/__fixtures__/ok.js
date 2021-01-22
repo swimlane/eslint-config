@@ -37,7 +37,13 @@ Object.keys(files).forEach(name => {
 // 'no-underscore-dangle': 'off'
 const _underscore = 123;
 
-export const x = (_unused) => {
+const x = (_unused) => {
   return _underscore;
 };
+
+// '@typescript-eslint/prefer-for-of': 'off'
+const arr = [];
+for (let i = 0; i < arr.length; i++) {
+  x(arr[i]);
+}
 

@@ -40,9 +40,15 @@ Object.keys(files).forEach(name => {
 const _underscore = 123;
 
 // @typescript-eslint/no-unused-vars: ['error', { argsIgnorePattern: '^_' }]
-export const x = (_unused: string): number => {
+const x = (_unused: string): number => {
   return _underscore;
 };
+
+// '@typescript-eslint/prefer-for-of': 'off'
+const arr = [];
+for (let i = 0; i < arr.length; i++) {
+  x(arr[i]);
+}
 
 // '@typescript-eslint/naming-convention': [
 //   'error',
