@@ -4,16 +4,20 @@
   "description": "Linting rules for Javascript",
   "main": "es6/index.js",
   "scripts": {
-    "test": "run-s lint prettier unit",
-    "unit": "jest",
     "watch": "jest --watchAll",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "prettier": "prettier --check \"**/*.{js,ts,scss,css,md,json}\"",
-    "prettier:fix": "prettier --write \"**/*.{js,ts,scss,css,md,json}\"",
-    "fix": "run-s prettier:fix lint:fix",
+    "test": "run-s test:*",
+    "test:prettier": "prettier --check \"**/*.{js,ts,scss,css,md,json}\"",
+    "test:lint": "eslint .",
+    "test:unit": "jest",
+    "fix": "run-s fix:*",
+    "fix:lint": "eslint . --fix",
+    "fix:prettier": "prettier --write \"**/*.{js,ts,scss,css,md,json}\"",
     "version": "chg release -y && git add -A CHANGELOG.md",
-    "np": "np"
+    "np": "np",
+    "audit": "run-s audit:*",
+    "audit:npm": "npm audit",
+    "audit:npm-check": "npm-check --skip-unused || true",
+    "npm-update": "npm-check --skip-unused -u"
   },
   "repository": {
     "type": "git",
@@ -38,17 +42,18 @@
   },
   "devDependencies": {
     "@swimlane/prettier-config-swimlane": "^3.0.3",
-    "@typescript-eslint/eslint-plugin": "^4.12.0",
-    "@typescript-eslint/parser": "^4.12.0",
+    "@typescript-eslint/eslint-plugin": "^4.33.0",
+    "@typescript-eslint/parser": "^4.33.0",
     "chg": "^0.4.0",
-    "eslint": "^7.16.0",
-    "eslint-config-prettier": "^7.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^7.2.0",
     "eslint-plugin-security": "^1.4.0",
-    "jest": "^26.6.3",
-    "np": "^7.2.0",
+    "jest": "^27.5.1",
+    "np": "^7.6.0",
+    "npm-check": "^5.9.2",
     "npm-run-all": "^4.1.5",
-    "prettier": "^2.2.1",
-    "ts-node": "^9.1.1",
-    "typescript": "^4.1.3"
+    "prettier": "^2.5.1",
+    "ts-node": "^10.5.0",
+    "typescript": "^4.4.4"
   }
 }

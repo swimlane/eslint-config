@@ -63,6 +63,34 @@ parserOptions:
   ecmaVersion: 12
 ```
 
+## Angular
+
+For angular projects you should use the `@angular-eslint/schematics` as described [here](https://github.com/angular-eslint/angular-eslint#quick-start-with-angular-before-v12) and then add the following to your `.eslintrc.yml` file:
+
+```yaml
+root: true
+extends:
+  - '@swimlane'
+  - prettier
+overrides:
+  - files:
+      - '*.ts'
+    parser: '@typescript-eslint/parser'
+    parserOptions:
+      project:
+        - tsconfig.json
+      createDefaultProgram: true
+    extends:
+      - '@swimlane/eslint-config/typescript'
+      - plugin:@angular-eslint/recommended
+      - plugin:@angular-eslint/template/process-inline-templates
+      - prettier
+  - files:
+      - '*.html'
+    extends:
+      - plugin:@angular-eslint/template/recommended
+```
+
 ## Versioning Policy
 
 - Major (new linting errors)
