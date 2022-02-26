@@ -48,8 +48,15 @@ parserOptions:
 
 ## Prettier
 
-If using prettier (for example [@swimlane/prettier-config-swimlane](https://github.com/swimlane/prettier-config-swimlane)) you should follow instructions in the [eslint-config-prettier readme](https://github.com/prettier/eslint-config-prettier#readme) to install and setup `eslint-config-prettier`. For example for es6 config your
-`.eslintrc.yml` file will be:
+If using prettier (for example [@swimlane/prettier-config-swimlane](https://github.com/swimlane/prettier-config-swimlane)) you should follow instructions in the [eslint-config-prettier readme](https://github.com/prettier/eslint-config-prettier#readme) to install and setup `eslint-config-prettier`.  Then installed the `@swimlane/eslint-config` and update your `.eslintrc.yml`.
+
+Install:
+
+```sh
+npm install --save-dev @swimlane/eslint-config eslint-plugin-security
+```
+
+For example for es6 config your `.eslintrc.yml` file will be:
 
 ```yaml
 env:
@@ -65,7 +72,15 @@ parserOptions:
 
 ## Angular
 
-For angular projects you should use the `@angular-eslint/schematics` as described [here](https://github.com/angular-eslint/angular-eslint#quick-start-with-angular-before-v12) and then add the following to your `.eslintrc.yml` file:
+For angular projects you should add `@angular-eslint/schematics` as described [here](https://github.com/angular-eslint/angular-eslint) and `eslint-config-prettier` as described here](https://github.com/prettier/eslint-config-prettier#readme).  Then installed the `@swimlane/eslint-config` and update your `.eslintrc.yml`.
+
+Install:
+
+```sh
+npm install --save-dev eslint @swimlane/eslint-config eslint-plugin-security
+```
+
+Your `.eslintrc.yml` file will be:
 
 ```yaml
 root: true
