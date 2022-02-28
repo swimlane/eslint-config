@@ -48,7 +48,7 @@ parserOptions:
 
 ## Prettier
 
-If using prettier (for example [@swimlane/prettier-config-swimlane](https://github.com/swimlane/prettier-config-swimlane)) you should follow instructions in the [eslint-config-prettier readme](https://github.com/prettier/eslint-config-prettier#readme) to install and setup `eslint-config-prettier`.  Then installed the `@swimlane/eslint-config` and update your `.eslintrc.yml`.
+If using prettier (for example [@swimlane/prettier-config-swimlane](https://github.com/swimlane/prettier-config-swimlane)) you should follow instructions in the [eslint-config-prettier readme](https://github.com/prettier/eslint-config-prettier#readme) to install and setup `eslint-config-prettier`. Then installed the `@swimlane/eslint-config` and update your `.eslintrc.yml`.
 
 Install:
 
@@ -72,7 +72,7 @@ parserOptions:
 
 ## Angular
 
-For angular projects you should add `@angular-eslint/schematics` as described [here](https://github.com/angular-eslint/angular-eslint) and `eslint-config-prettier` as described here](https://github.com/prettier/eslint-config-prettier#readme).  Then installed the `@swimlane/eslint-config` and update your `.eslintrc.yml`.
+For angular projects you should add `@angular-eslint/schematics` as described [here](https://github.com/angular-eslint/angular-eslint) and `eslint-config-prettier` as described here](https://github.com/prettier/eslint-config-prettier#readme). Then installed the `@swimlane/eslint-config` and update your `.eslintrc.yml`.
 
 Install:
 
