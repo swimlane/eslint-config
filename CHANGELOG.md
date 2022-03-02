@@ -3,6 +3,7 @@ CHANGELOG
 
 ## HEAD (Unreleased)
 
+* Docs: Added Angular instructions
 * Major: added `'no-console': 'error'`
 * Major: added `'no-alert': 'error'`
 * Major: added `'no-debugger': 'error'`

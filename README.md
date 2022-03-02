@@ -48,8 +48,15 @@ parserOptions:
 
 ## Prettier
 
-If using prettier (for example [@swimlane/prettier-config-swimlane](https://github.com/swimlane/prettier-config-swimlane)) you should follow instructions in the [eslint-config-prettier readme](https://github.com/prettier/eslint-config-prettier#readme) to install and setup `eslint-config-prettier`. For example for es6 config your
-`.eslintrc.yml` file will be:
+If using prettier (for example [@swimlane/prettier-config-swimlane](https://github.com/swimlane/prettier-config-swimlane)) you should follow instructions in the [eslint-config-prettier readme](https://github.com/prettier/eslint-config-prettier#readme) to install and setup `eslint-config-prettier`. Then installed the `@swimlane/eslint-config` and update your `.eslintrc.yml`.
+
+Install:
+
+```sh
+npm install --save-dev @swimlane/eslint-config eslint-plugin-security
+```
+
+For example for es6 config your `.eslintrc.yml` file will be:
 
 ```yaml
 env:
@@ -61,6 +68,42 @@ extends:
   - 'prettier'
 parserOptions:
   ecmaVersion: 12
+```
+
+## Angular
+
+For angular projects you should add `@angular-eslint/schematics` as described [here](https://github.com/angular-eslint/angular-eslint) and `eslint-config-prettier` as described here](https://github.com/prettier/eslint-config-prettier#readme). Then installed the `@swimlane/eslint-config` and update your `.eslintrc.yml`.
+
+Install:
+
+```sh
+npm install --save-dev eslint @swimlane/eslint-config eslint-plugin-security
+```
+
+Your `.eslintrc.yml` file will be:
+
+```yaml
+root: true
+extends:
+  - '@swimlane'
+  - prettier
+overrides:
+  - files:
+      - '*.ts'
+    parser: '@typescript-eslint/parser'
+    parserOptions:
+      project:
+        - tsconfig.json
+      createDefaultProgram: true
+    extends:
+      - '@swimlane/eslint-config/typescript'
+      - plugin:@angular-eslint/recommended
+      - plugin:@angular-eslint/template/process-inline-templates
+      - prettier
+  - files:
+      - '*.html'
+    extends:
+      - plugin:@angular-eslint/template/recommended
 ```
 
 ## Versioning Policy
